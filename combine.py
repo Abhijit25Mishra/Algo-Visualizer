@@ -14,7 +14,13 @@ class App(Tk):
         self.arr=[]
         self.title("Visualizing Algorithms")
         self.minsize(600,400)
-        self.wm_iconbitmap("icon.ico")
+        #self.wm_iconbitmap("icon.ico")
+        #for windos ico format of icon and for Linux xbm format
+        if "nt" == os.name:
+            self.wm_iconbitmap(bitmap = "icon.ico")
+        else:
+            self.wm_iconbitmap(bitmap = "@icon.xbm")
+        
         bl = "RoyalBlue2" 
         yll = "yellow2"
         
